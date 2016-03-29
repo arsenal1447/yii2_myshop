@@ -1,4 +1,6 @@
-<<<<<<< HEAD
+
+<b>copy other's code for test<b>
+
 Funshop -- An agile shop based on Yii2
 ==========
 
@@ -71,7 +73,6 @@ Funshop -- An agile shop based on Yii2
 
 Sql file in /tests/funshop20150408.sql   
 Backend password: admin qwe1234
-=======
+
 # myshop
 copy other's code for test
->>>>>>> 57f08d9533537c2a5ac12a63404027b092a6e9dd
