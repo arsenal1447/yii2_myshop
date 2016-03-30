@@ -80,7 +80,11 @@ class CouponController extends Controller
         $model = new Coupon();
         $model->loadDefaultValues();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+//         if ($model->load(Yii::$app->request->post()) && $model->save(false)) {
+        if ($model->load(Yii::$app->request->post())) {
+            $model->started_at = strtotime($model->started_at);
+            $model->ended_at = strtotime($model->ended_at) + 86400 - 1;
+            $model->save();
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [

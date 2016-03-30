@@ -41,6 +41,8 @@ $this->params['breadcrumbs'][] = $this->title;
                 'value' => $model->order_id ? $model->order_id : '-',
             ],
             'used_at:date',
+            'started_at:date',
+            'ended_at:date',
             'created_at:datetime',
             'updated_at:datetime',
             [
