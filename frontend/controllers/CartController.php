@@ -77,7 +77,7 @@ class CartController extends \frontend\components\Controller
     {
         Yii::$app->session['step'] = 2;
 
-        $userId = Yii::$app->user->id;
+        $userId = Yii::$app->user->id();
         $addresses = Address::find()->where(['user_id' => $userId])->all();
 
         $model = new Order();
@@ -152,6 +152,7 @@ class CartController extends \frontend\components\Controller
                 foreach ($products as $product) {
                     $orderProduct = new OrderProduct();
                     $orderProduct->order_id = $model->id;
+                    $orderProduct->user_id = $userId;
                     $orderProduct->product_id = $product->product_id;
                     $orderProduct->sku = $product->sku;
                     $orderProduct->name = $product->name;
