@@ -58,7 +58,7 @@ class Coupon extends \yii\db\ActiveRecord
     {
         return [
             [['coupon_type_id', 'money', 'started_at', 'ended_at'], 'required'],
-            [['user_id', 'coupon_type_id', 'started_at', 'ended_at', 'order_id', 'used_at', 'created_at', 'updated_at', 'created_by', 'updated_by'], 'integer'],
+            [['user_id', 'coupon_type_id', 'order_id', 'used_at', 'created_at', 'updated_at', 'created_by', 'updated_by'], 'integer'],
             [['money', 'min_amount'], 'number'],
             [['sn'], 'string', 'max' => 255]
         ];

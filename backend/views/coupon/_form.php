@@ -31,7 +31,9 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'used_at')->textInput(['style'=>'width:120px']) ?>
 
-   
+    <?= $form->field($model, 'money')->textInput(['style'=>'width:120px']) ?>
+
+    <?= $form->field($model, 'min_amount')->textInput(['style'=>'width:120px']) ?>
 
     <?= $form->field($model, 'created_by')->textInput(['style'=>'width:120px']) ?>
 

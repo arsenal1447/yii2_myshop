@@ -167,7 +167,12 @@ class CouponTypeController extends Controller
 
         $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post())) {
+
+            $model->started_at = strtotime($model->started_at);
+            $model->ended_at = strtotime($model->ended_at) + 86400 - 1;
+            $model->save();
+            
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('update', [
