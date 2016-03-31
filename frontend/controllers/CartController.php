@@ -78,7 +78,6 @@ class CartController extends \frontend\components\Controller
         Yii::$app->session['step'] = 2;
 
         $userId = Yii::$app->user->id;
-//         $userId = Yii::$app->user->getId();
         $addresses = Address::find()->where(['user_id' => $userId])->all();
 
         $model = new Order();
