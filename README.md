@@ -72,7 +72,8 @@ Funshop -- An agile shop based on Yii2
 
 
 Sql file in /tests/funshop20150408.sql   
-Backend password: admin qwe1234
+Backend password: admin qwe1234  
+                                                                              Backend password: admin 123456
 
 # myshop
 copy other's code for test
