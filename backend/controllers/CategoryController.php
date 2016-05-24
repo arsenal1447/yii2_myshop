@@ -80,6 +80,9 @@ class CategoryController extends Controller
 
         $model = new Category();
         $model->loadDefaultValues();
+        
+        $model->created_by = $model->updated_by = Yii::$app->user->id;
+//         $model->updated_by = Yii::$app->user->id;
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
