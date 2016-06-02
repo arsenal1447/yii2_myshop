@@ -21,18 +21,6 @@ $this->registerJsFile('@web/js/switchable.js', ['depends' => \frontend\assets\Ap
             <li data-img="/images/banner4.jpg">
                 <a href="#" title=""></a>
             </li>
-            <li data-img="/images/banner1.jpg">
-                <a href="#" title=""></a>
-            </li>
-            <li data-img="/images/banner2.jpg">
-                <a href="#" title=""></a>
-            </li>
-            <li data-img="/images/banner3.jpg">
-                <a href="#" title=""></a>
-            </li>
-            <li data-img="/images/banner4.jpg">
-                <a href="#" title=""></a>
-            </li>
         </ul>
 
         <div class="trigger-box">&nbsp;</div>

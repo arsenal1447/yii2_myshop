@@ -20,9 +20,9 @@
             </div>
             <div class="ft_txt">
                 <p>
-                    Copyright <?= date('Y') ?>, 深圳市华之腾技术有限公司 增值电信业务经营许可证：粤B2-20150326 备案号：<a href="http://www.miitbeian.gov.cn" target="_blank" rel="nofollow">粤ICP备15012845号-5</a></p>
+                    Copyright <?= date('Y') ?>, ************* 增值电信业务经营许可证：粤B2-20150326 备案号：<a href="http://www.miitbeian.gov.cn" target="_blank" rel="nofollow">粤ICP备15012845号-5</a></p>
                 <p class="ft_contact">
-                    <span>服务时间：09:00-23:00</span> <span class="ft_phone">客服热线: <em>0755-36943966</em></span></p>
+                    <span>服务时间：09:00-23:00</span> <span class="ft_phone">客服热线: <em>010-12345678</em></span></p>
                 <p class="beian-logos">
                     <a href="#" target="_blank"><img alt="商城获得电商金典奖" src="/images/flogo-jindian.png" /></a>
                     <a href="#" target="_blank"><img alt="中国人保为商城化妆品承保" src="/images/flogo-picc.png" /></a>

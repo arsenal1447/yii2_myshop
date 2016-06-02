@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use yii\helpers\ArrayHelper;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\Coupon */
@@ -23,7 +24,8 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'user_id')->textInput(['style'=>'width:120px']) ?>
 
-    <?= $form->field($model, 'coupon_type_id')->textInput(['style'=>'width:120px']) ?>
+    <?php //echo $form->field($model, 'coupon_type_id')->textInput(['style'=>'width:120px']) ?>
+    <?= $form->field($model, 'coupon_type_id')->dropDownList(ArrayHelper::map(\common\models\CouponType::find()->all(), 'id', 'name'),['prompt'=>'请选择','style'=>'width:120px'])?>
 
     <?= $form->field($model, 'sn')->textInput(['maxlength' => 255,'style'=>'width:255px']) ?>
 

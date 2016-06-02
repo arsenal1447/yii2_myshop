@@ -92,7 +92,8 @@ $i = 0;
             <div class="user-other">
                 <div id="use-coupon" class="use-dixiao cle" style="display: block;">
                     <span class="tit"><input type="checkbox" name="checkbox-coupon" id="checkbox-coupon"> 使用优惠券</span>
-                    <span class="used"></span> <span class="gray again">【<a href="javascript:;">重新选择</a>】</span> <span class="gray cancel">【<a href="javascript:;">取消</a>】</span>
+                    <span class="used"></span> <span class="gray again">【<a href="javascript:;">重新选择</a>】</span>
+                    <span class="gray cancel">【<a href="javascript:;">取消</a>】</span>
                     <div class="dixiao-tip"></div>
                 </div>
                 <div id="coupon_box" class="use_box">

@@ -36,6 +36,11 @@
     "config": {
         "process-timeout": 1800
     },
+    "autoload": {
+        "files": [
+          "common/components/GlobalFunctions.php"
+        ]
+    },
     "extra": {
         "asset-installer-paths": {
             "npm-asset-library": "vendor/npm",

@@ -44,7 +44,9 @@ use mihaildev\ckeditor\CKEditor;
             'inline' => false,
         ],
     ]); ?>
-
+        
+    <?= $form->field($model, 'image')->textInput(['maxlength' => 255]) ?>
+    
     <?= $form->field($model, 'keywords')->textInput(['maxlength' => 255]) ?>
 
     <?= $form->field($model, 'description')->textarea(['rows' => 6]) ?>
