@@ -50,7 +50,8 @@ td img{width:100px;}
             'market_price',
             'price',
             'brief',
-            'content:ntext',
+//             'content:ntext',
+            'content:html',
             [
                 'attribute' => 'thumb',
                 'format' => 'image',
@@ -58,7 +59,12 @@ td img{width:100px;}
                 'options' => ['style' => 'width:100px' ],
                 'visible' => isset($model->thumb),
             ],
-            'image',
+//             'image',
+            [
+                'attribute'=>'image',
+                'format' => 'html',
+                'value'=>'<img src ='.$model->image . ' height="100" width="100"' .   '>',
+            ],
             'keywords',
             'description:ntext',
             [

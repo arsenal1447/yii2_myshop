@@ -63,7 +63,7 @@ use mihaildev\ckeditor\CKEditor;
             foreach ($model->productImages as $image) {
                 echo '<div style="width:150px; float: left; text-align: center">';
                 echo '<a href="' . \Yii::$app->getUrlManager()->createUrl(['product/remove', 'id' => $image->id]) . '" title="' . Yii::t('app', 'Delete') . '" data-confirm="' . Yii::t('app', 'Are you sure you want to delete this item?') . '" data-method="post" data-pjax="0"><span class="glyphicon glyphicon-trash"></span></a><br>';
-                if (strpos($image->thumb, 'http://') === null) {
+                if (strpos($image->thumb, 'upload')) {
                     $file = Yii::getAlias('@frontend/web' . $image->thumb);
                     $fileType = \yii\helpers\FileHelper::getMimeType($file);
                     $data = base64_encode(file_get_contents($file));
