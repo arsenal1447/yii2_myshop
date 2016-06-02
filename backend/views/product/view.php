@@ -90,7 +90,7 @@ td img{width:100px;}
 
 <?php
 foreach ($model->productImagesSort as $item) {
-    if (strpos($model->thumb, 'http://') === null) {
+    if (strpos($item->thumb, 'upload')) {
         $file = Yii::getAlias('@frontend/web' . $item->thumb);
         $fileType = \yii\helpers\FileHelper::getMimeType($file);
         $data = base64_encode(file_get_contents($file));

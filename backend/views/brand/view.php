@@ -28,7 +28,11 @@ $this->params['breadcrumbs'][] = $this->title;
         'attributes' => [
             'id',
             'name',
-            'logo',
+            [
+                'attribute'=>'logo',
+                'format' => 'html',
+                'value'=>'<img src ='.$model->logo . ' height="200" width="300"' .   '>',
+            ],
             'description:ntext',
             'url:url',
             'sort_order',
