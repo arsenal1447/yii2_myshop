@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
+use backend\models\User;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\Product */
@@ -55,7 +56,7 @@ td img{width:100px;}
             [
                 'attribute' => 'thumb',
                 'format' => 'image',
-                'value' => isset($data) ? "data:" . $fileType .";base64," . $data . "" : ($model->thumb ? $model->thumb : ''),
+                'value' => isset($data) ? "data:" . $fileType .";base64," . $data . "" : ($model->thumb ? User::showPic($model->thumb) : ''),
                 'options' => ['style' => 'width:100px' ],
                 'visible' => isset($model->thumb),
             ],
@@ -63,7 +64,7 @@ td img{width:100px;}
             [
                 'attribute'=>'image',
                 'format' => 'html',
-                'value'=>'<img src ='.$model->image . ' height="100" width="100"' .   '>',
+                'value'=>'<img src ='.User::showPic($model->image) . ' height="100" width="100"' .   '>',
             ],
             'keywords',
             'description:ntext',

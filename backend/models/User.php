@@ -176,6 +176,12 @@ class User extends \common\models\User
             }
         }
     }
+    
+    public static function showPic($path){
+        $newpath = "http://local.yii2_myshop.com".Yii::getAlias('@web'.$path);
+        
+        return $newpath;
+    }
 
 
 }
