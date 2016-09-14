@@ -52,18 +52,18 @@ class Order extends \yii\db\ActiveRecord
     const STATUS_CANCEL = -1;
     const STATUS_DELETED = -2;
 
-    const PAYMENT_METHOD_PAY = 1;
-    const PAYMENT_METHOD_COD = 2;
+    const PAYMENT_METHOD_PAY = 1;//在线支付
+    const PAYMENT_METHOD_COD = 2;//货到付款
 
-    const PAYMENT_STATUS_COD = 10;
-    const PAYMENT_STATUS_UNPAID = 20;
-    const PAYMENT_STATUS_PAYING = 30;
-    const PAYMENT_STATUS_PAID = 40;
+    const PAYMENT_STATUS_COD = 10;//货到付款
+    const PAYMENT_STATUS_UNPAID = 20;//未付款
+    const PAYMENT_STATUS_PAYING = 30;//正在付款
+    const PAYMENT_STATUS_PAID = 40;//已付款
 
-    const SHIPMENT_STATUS_UNSHIPPED = 60;
-    const SHIPMENT_STATUS_PREPARING = 70;
-    const SHIPMENT_STATUS_SHIPPED = 80;
-    const SHIPMENT_STATUS_RECEIVED = 90;
+    const SHIPMENT_STATUS_UNSHIPPED = 60;//未发货
+    const SHIPMENT_STATUS_PREPARING = 70;//准备发货
+    const SHIPMENT_STATUS_SHIPPED = 80;//已发货
+    const SHIPMENT_STATUS_RECEIVED = 90;//已收货
 
     public $address_id;
 
@@ -280,7 +280,7 @@ class Order extends \yii\db\ActiveRecord
 
     /**
      * Before save.
-     * 
+     *
      */
     /*public function beforeSave($insert)
     {

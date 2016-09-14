@@ -3,15 +3,23 @@
 use yii\web\Response;
 
 /**
- * @param $message
- * @param bool|true $debug
+ * @param $arr
+ * @param bool|true $flg
  */
-function pr($message, $debug = true)
+function pr($arr, $flg = true)
 {
-    echo '<pre>';
-    print_r($message);
-    echo '</pre>';
-    if ($debug) {
-        die;
+    if(is_array($arr)){
+            echo "<pre>";
+            print_R($arr);
+            echo "</pre>";
+    }elseif(is_string($arr)){
+        echo "<br>arr==";
+        echo $arr;
+        echo "</br>";
+    }
+    if(!$flg){
+        die('arr end');
+    }else{
+        echo "<br><hr>";
     }
 }

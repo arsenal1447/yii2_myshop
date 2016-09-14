@@ -178,6 +178,9 @@ class User extends \common\models\User
     }
     
     public static function showPic($path){ 
+        if(substr($path,0,4)=="http"){//如果是网络图片，就返回网络图片
+            return $path;
+        }
         $newpath = Yii::$app->params['frontsite_url'].Yii::getAlias('@web'.$path);
         
         return $newpath;
